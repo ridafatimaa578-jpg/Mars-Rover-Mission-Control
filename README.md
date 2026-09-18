@@ -17,3 +17,15 @@ Based on the initial engineering notes provided by the rover team, the system re
 2. **NFR-02 (Latency & Processing):** Command processing should normally complete within 5 seconds after a command is received by the rover.
 3. **NFR-03 (Scalability - Original):** The system should support communication with multiple rovers simultaneously.
 4. **NFR-04 (Communication Constraints):** The system shall handle limited communication bandwidth and multi-minute communication delays without relying on unconfirmed command repetitions.
+
+### Change Request CR-01 — Emergency Safety
+* **Original FR-04:** The rover shall enter Safe Mode when a critical battery or thermal condition is detected.
+* **Updated FR-04:** The rover shall enter Safe Mode **within 3 seconds** when battery temperature exceeds the critical threshold or battery capacity falls below the defined emergency level.
+
+### Change Request CR-02 — Mission Expansion (Scalability)
+* **Original NFR-03/04:** The system shall support communication with multiple rovers simultaneously.
+* **Updated NFR-04:** The system shall support **at least 20 simultaneously connected rovers** (making the requirement fully measurable).
+
+### Change Request CR-03 — Security Upgrade
+* **Original FR-03/NFR:** Only authenticated Mission Control operators shall be permitted to issue rover commands.
+* **Updated NFR-02:** The system shall require **authenticated and role-authorized operators** before accepting rover commands.
