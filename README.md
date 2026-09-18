@@ -12,4 +12,8 @@ Based on the initial engineering notes provided by the rover team, the system re
 5. **FR-05 (Emergency Safety - Original):** If the rover detects a critical battery or thermal condition, it shall enter Safe Mode.
 6. **FR-06 (Execution Status):** Mission Control shall receive command execution status.
 7. **FR-07 (Event Logging):** All commands and critical rover events shall be recorded with a timestamp and operator ID.
-
+### Non-Functional Requirements (NFRs)
+1. **NFR-01 (Fault Tolerance):** The system shall continue operating despite temporary communication interruptions.
+2. **NFR-02 (Latency & Processing):** Command processing should normally complete within 5 seconds after a command is received by the rover.
+3. **NFR-03 (Scalability - Original):** The system should support communication with multiple rovers simultaneously.
+4. **NFR-04 (Communication Constraints):** The system shall handle limited communication bandwidth and multi-minute communication delays without relying on unconfirmed command repetitions.
